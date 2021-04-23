@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane minHeight="400.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Appointments">
+   <children>
+      <ToolBar prefHeight="44.0" prefWidth="1000.0">
+         <items>
+            <Button fx:id="MainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" text="Main" />
+            <Button fx:id="CustomersButton" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleCustomersButton" text="Customers" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="AppointmentsTable" editable="true" layoutX="29.0" layoutY="61.0" prefHeight="302.0" prefWidth="950.0">
+         <columns>
+            <TableColumn fx:id="AppointmentIDColumn" maxWidth="800.0" prefWidth="34.0" text="ID" />
+            <TableColumn fx:id="TitleColumn" prefWidth="67.0" text="Title" />
+            <TableColumn fx:id="DescriptionColumn" prefWidth="129.0" text="Description" />
+            <TableColumn fx:id="LocationColumn" prefWidth="98.0" text="Location" />
+            <TableColumn fx:id="ContactColumn" prefWidth="149.95877075195312" text="Contact" />
+            <TableColumn fx:id="TypeColumn" prefWidth="74.89907836914062" text="Type" />
+            <TableColumn fx:id="StartColumn" prefWidth="136.31561279296875" text="Start" />
+            <TableColumn fx:id="EndColumn" prefWidth="132.68438720703125" text="End" />
+            <TableColumn fx:id="CustomerNameColumn" prefWidth="125.516357421875" text="Customer" />
+         </columns>
+      </TableView>
+      <HBox layoutX="19.0" layoutY="374.0" spacing="5.0">
+         <children>
+            <Button fx:id="EditAppointmentButton" mnemonicParsing="false" onAction="#handleEditAppointmentButton" text="Edit" />
+            <Button fx:id="DeleteAppointmentButton" mnemonicParsing="false" onAction="#handleDeleteAppointmentButton" text="Delete" />
+            <Button fx:id="RefreshTableButton" mnemonicParsing="false" onAction="#handleRefreshTableButton" text="Refresh" />
+            <Label fx:id="FilterGroupLabel" alignment="CENTER" contentDisplay="CENTER" text="Filter By:" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="MonthComboBox" onAction="#handleMonthComboBox" promptText="Month" />
+            <ComboBox fx:id="WeekComboBox" onAction="#handleWeekComboBox" promptText="Week" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="717.0" layoutY="382.0" text="Schedule appointments on the Customers page." />
+   </children>
+</Pane>

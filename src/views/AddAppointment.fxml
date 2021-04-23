@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddAppointment">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="600.0">
+         <items>
+            <Button fx:id="MainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" text="Main" />
+            <Button fx:id="CustomersButton" mnemonicParsing="false" onAction="#handleCustomersButton" text="Customers" />
+            <Button fx:id="AppointmentsButton" mnemonicParsing="false" onAction="#handleAppointmentsButton" text="Appointments" />
+         </items>
+      </ToolBar>
+      <HBox layoutX="19.0" layoutY="71.0" prefHeight="259.0" prefWidth="563.0" spacing="40.0">
+         <children>
+            <Pane prefHeight="259.0" prefWidth="148.0">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="14.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="CustomerInfoTitleLabel" text="Customer Info:" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="CustomerNameLabel" text="Name">
+                           <graphic>
+                              <Label fx:id="NameLabel" text="Name:" />
+                           </graphic></Label>
+                        <Label fx:id="CustomerAddressLabel" text="Address">
+                           <graphic>
+                              <Label fx:id="AddressLabel" text="Address:" />
+                           </graphic></Label>
+                        <Label fx:id="CustomerPostalCodeLabel" text="Postal Code">
+                           <graphic>
+                              <Label fx:id="PostalCodeLabel" text="Postal Code:" />
+                           </graphic></Label>
+                        <Label fx:id="CustomerPhoneLabel" text="Phone">
+                           <graphic>
+                              <Label fx:id="PhoneLabel" text="Phone:" />
+                           </graphic></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <VBox prefHeight="259.0" prefWidth="455.0" spacing="10.0">
+               <children>
+                  <VBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="TitleField" promptText="Title" />
+                        <TextField fx:id="DescriptionField" promptText="Description" />
+                        <TextField fx:id="LocationField" promptText="Location" />
+                        <TextField fx:id="TypeField" promptText="Appointment Type" />
+                     </children>
+                  </VBox>
+                  <HBox spacing="41.0">
+                     <children>
+                        <DatePicker fx:id="StartDatePicker" editable="false" promptText="Start Date and Time" />
+                        <Spinner fx:id="StartTimeSpinner" prefHeight="27.0" prefWidth="187.5" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="41.0">
+                     <children>
+                        <DatePicker fx:id="EndDatePicker" editable="false" promptText="End Date and Time" />
+                        <Spinner fx:id="EndTimeSpinner" prefWidth="187.5" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="400.0" spacing="140.0">
+                     <children>
+                        <ComboBox fx:id="ContactsComboBox" prefHeight="27.0" prefWidth="230.0" promptText="Select Contact" />
+                        <Button fx:id="SaveAppointmentButton" mnemonicParsing="false" onAction="#handleSaveAppointmentButton" text="Save" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="CurrentUserLabel" layoutX="19.0" layoutY="369.0" text="Current User">
+         <graphic>
+            <Label text="Current User: " />
+         </graphic>
+      </Label>
+   </children>
+</Pane>

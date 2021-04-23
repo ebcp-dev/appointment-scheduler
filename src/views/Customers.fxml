@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="420.0" minWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Customers">
+   <children>
+      <ToolBar prefWidth="650.0">
+        <items>
+          <Button fx:id="MainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" text="Main" />
+            <Button fx:id="AppointmentsButton" mnemonicParsing="false" onAction="#handleAppointmentsButton" text="Appointments" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="CustomerTable" editable="true" layoutX="25.0" layoutY="46.0" prefHeight="330.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="CustomerIDColumn" prefWidth="34.0" text="ID" />
+          <TableColumn fx:id="CustomerNameColumn" prefWidth="119.0" text="Name" />
+          <TableColumn fx:id="CustomerAddressColumn" prefWidth="120.0" text="Address" />
+          <TableColumn fx:id="CustomerPostalCodeColumn" prefWidth="83.0" text="Postal Code" />
+          <TableColumn fx:id="CustomerPhoneColumn" prefWidth="111.0" text="Phone" />
+          <TableColumn fx:id="CustomerDivisionColumn" prefWidth="132.0" text="Division" />
+        </columns>
+      </TableView>
+      <HBox layoutX="25.0" layoutY="380.0" spacing="5.0">
+         <children>
+            <Button fx:id="AddCustomerButton" mnemonicParsing="false" onAction="#handleAddCustomerButton" text="Add Customer" />
+            <Button fx:id="EditCustomerButton" mnemonicParsing="false" onAction="#handleEditCustomerButton" text="Edit" />
+            <Button fx:id="AddAppointmentButton" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleAddAppointmentButton" text="Schedule Appointment" />
+            <Button fx:id="DeleteCustomerButton" mnemonicParsing="false" onAction="#handleDeleteCustomerButton" text="Delete" />
+            <Button fx:id="RefreshTableButton" mnemonicParsing="false" onAction="#handleRefreshTableButton" text="Refresh" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</Pane>

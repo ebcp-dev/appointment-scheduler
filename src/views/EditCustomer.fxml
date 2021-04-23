@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditCustomer">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="600.0">
+         <items>
+            <Button fx:id="MainMenuButton" mnemonicParsing="false" onAction="#handleMainMenuButton" text="Main" />
+            <Button fx:id="CustomersButton" mnemonicParsing="false" onAction="#handleCustomersButton" text="Customers" />
+            <Button fx:id="AppointmentsButton" mnemonicParsing="false" onAction="#handleAppointmentsButton" text="Appointments" />
+         </items>
+      </ToolBar>
+      <VBox layoutX="100.0" layoutY="75.0" prefHeight="230.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="CustomerNameField" promptText="Name">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="CustomerAddressField" promptText="Address">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="CustomerPostalCodeField" promptText="Postal Code">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="CustomerPhoneField" promptText="Phone">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <ComboBox fx:id="CountryComboBox" onAction="#handleCountryComboBox" prefHeight="27.0" prefWidth="200.0" promptText="Select Country" />
+                  <ComboBox fx:id="FirstLevelDivisionsComboBox" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="200.0" promptText="Select First Level Division" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="47.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="SaveCustomerButton" mnemonicParsing="false" onAction="#handleSaveCustomerButton" text="Save">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="DeleteCustomerButton" layoutX="365.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeleteCustomerButton" text="Delete">
+                     <HBox.margin>
+                        <Insets left="301.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
